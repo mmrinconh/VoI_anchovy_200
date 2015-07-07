@@ -20,7 +20,7 @@ months<-c(months[],length(months[1]:months[2]))
 years<-c(0,48)
 years<-c(years[],length(years[2]:years[1]))
 
-sims<-c(1,200)
+sims<-c(1,1000)
 sims<-c(sims[],length(sims[2]:sims[1]))
 Rel_F<-matrix(1,sims[3],49)
 iniQuant  <- array(NA, dim = c(ages[3],months[3],years[3],sims[3]))
@@ -869,9 +869,9 @@ HCR<-rbind(PremiumHCR,
            ReInsPremiumHCR,
            MeanYieldHCR,
            SdYieldHCR,
-           SdYieldHCR*100/MeanYieldHCR,
-           Prob_CC_Reached_Y_HCR*100,
-           Prob_Crash_Y_HCR*100,
+           SdYieldHCR*1000/MeanYieldHCR,
+           Prob_CC_Reached_Y_HCR*1000,
+           Prob_Crash_Y_HCR*1000,
            MeanYieldHCR-AvePremiumHCR-ReInsPremiumHCR)
 
 
@@ -881,9 +881,9 @@ EHCR<-rbind(PremiumEHCR,
             ReInsPremiumEHCR,
             MeanYieldEHCR,
             SdYieldEHCR,
-            SdYieldEHCR*100/MeanYieldEHCR,
-            Prob_CC_Reached_Y_EHCR*100,
-            Prob_Crash_Y_EHCR*100,
+            SdYieldEHCR*1000/MeanYieldEHCR,
+            Prob_CC_Reached_Y_EHCR*1000,
+            Prob_Crash_Y_EHCR*1000,
             MeanYieldEHCR-AvePremiumEHCR-ReInsPremiumEHCR)
 
 Results<-cbind(HCR,EHCR)
